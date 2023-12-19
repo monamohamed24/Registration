@@ -11,9 +11,10 @@ public class TC04_ParentCommunicationInfo extends TestBase {
 
 
     @Test
-    public void CheckCommInfo(){
+    public void CheckCommInfo() throws InterruptedException {
         checkinfo=new Step2_ParentCommunicationInfoPage(driver);
         checkinfo.communicationData(driver, Data.Address);
+        Thread.sleep(2000);
 
     }
 }

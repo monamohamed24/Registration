@@ -1,10 +1,12 @@
 package Pages.ParentRegister;
 
 import Pages.PageBase;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
+import java.util.List;
 
 public class Step3_ParentJobInfoPage extends PageBase {
 
@@ -14,10 +16,17 @@ public class Step3_ParentJobInfoPage extends PageBase {
     }
 
     public void ParentJobInfo(WebDriver drive){
-        int ParentJob= drive.findElements(By.cssSelector("div[class=\"vs__selected-options\"]")).size();
-        System.out.println(ParentJob);
-//        setTextElement(ParentJob,"سعودى");
-//        ParentJob.sendKeys(Keys.ENTER);
+
+//            WebElement ParentJob= drive.findElements(By.cssSelector("input[class=\"vs__search\"]")).get(1);
+        WebElement ParentJob= drive.findElement(By.xpath("//*[@id=\"vs1__combobox\"]/div[1]/input"));
+
+            System.out.println(ParentJob);
+            clickButton(ParentJob);
+            setTextElement(ParentJob,"سعودى");
+            ParentJob.sendKeys(Keys.ENTER);
+
+        WebElement next= drive.findElements(By.cssSelector("button[class*=\"form-button\"]")).get(2);
+        clickButton(next);
 
 
 
