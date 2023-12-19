@@ -5,6 +5,9 @@ import java.util.Random;
 public class Data {
     public static String FirstName = "mona";
     public static String SecondName = "mohamed";
+    public static String ThirdName = "mohamed";
+    public static String Address = "cairo";
+
 
     static Random random = new Random();
     static int randomInt  = random.nextInt(800)+100;

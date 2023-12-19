@@ -6,10 +6,16 @@
   <test name="Regression Test" verbose="2" parallel="false" >
 
   <classes>
-    <class name="Test.ParentRegister.TC01_ParentAddAccount"/>
+    <class name="Test.ParentRegister.TC01_CheckID"/>
+    <class name="Test.ParentRegister.TC02_CheckPhoneNumber"/>
+    <class name="Test.ParentRegister.TC03_ParentAddInfo"/>
+    <class name="Test.ParentRegister.TC04_ParentCommunicationInfo"/>
+    <class name="Test.ParentRegister.TC05_ParentJobInfo"/>
+    <class name="Test.ParentRegister.TC06_ParentAddPasswordPage"/>
 
 
 
-    </classes>
+
+  </classes>
   </test> 
 </suite> 
