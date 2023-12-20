@@ -12,10 +12,8 @@ public class TC06_ParentAddPasswordPage extends TestBase {
     public void ParentAddPass(){
         checkPass=new Step4_ParentAddPasswordPage(driver);
         checkPass.ParentAddPass(driver, Data.Password);
-
         String Actual=driver.getCurrentUrl();
         String Expected="https://frontend.oetest2.tech/registration/ar";
-
-    Assert.assertEquals(Actual,Expected);
+        Assert.assertEquals(Actual,Expected);
     }
 }

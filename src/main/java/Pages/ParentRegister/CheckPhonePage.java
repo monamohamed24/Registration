@@ -21,26 +21,20 @@ public class CheckPhonePage extends PageBase {
     public void CheckPhone(String PhoneNumber){
         setTextElement(Phone,PhoneNumber);
     }
-
-    public void checkVerifyCode(WebDriver drive) {
+   public void checkVerifyCode(WebDriver drive) {
         try {
-
             WebDriverWait exp= new WebDriverWait(drive, Duration.ofSeconds(7000));
-            exp.until
-                    (ExpectedConditions.visibilityOfElementLocated
+            exp.until(ExpectedConditions.visibilityOfElementLocated
                             (By.cssSelector("input[class=\"otp-input\"]")));
-            List<WebElement> SearchVerifynNmber=   drive.findElements(By.cssSelector("input[class=\"otp-input\"]"));
-            for(int i=0 ; i< SearchVerifynNmber.size(); i++ ) {
-                setTextElement(SearchVerifynNmber.get(i), String.valueOf(i+1));
-
+            List<WebElement>SearchVerifyNumber=drive.findElements(By.cssSelector("input[class=\"otp-input\"]"));
+            for(int i=0 ; i< SearchVerifyNumber.size(); i++ ) {
+                setTextElement(SearchVerifyNumber.get(i), String.valueOf(i+1));
             }
         }
-
         catch (NoAlertPresentException e) {
             e.printStackTrace();
-            System.out.println("Alert not shown");
         }
-    }
+}
 }
 
 

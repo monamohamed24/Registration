@@ -17,7 +17,6 @@ public class TC02_CheckPhoneNumber extends TestBase {
         checkId=new CheckIDPage(driver);
         checkId.clickbutton();
     }
-
     @Test(priority = 2)
     public void CheckVerifyPhoneNumber() throws InterruptedException{
 
